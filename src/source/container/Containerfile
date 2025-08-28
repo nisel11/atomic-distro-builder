@@ -10,7 +10,7 @@ STOPSIGNAL SIGRTMIN+3
 
 # Install packages for building
 RUN apt-get update && \
-    apt-get install -y sudo git make hasher hasher-priv mkimage mkimage-preinstall && \
+    apt-get install -y sudo git make hasher hasher-priv mkimage mkimage-preinstall isomd5sum && \
     apt-get clean -y
 
 # Remove !container from hasher-privd service

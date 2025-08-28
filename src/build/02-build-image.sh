@@ -11,9 +11,9 @@ sudo podman exec iso-builder su - builder -c "
   git clone -b next https://altlinux.space/mkimage-profiles/mkimage-profiles.git mkimage-profiles && \
   cp -rf mkimage/* mkimage-profiles && \
   cd mkimage-profiles
-  make \
+  make V=1 DEBUG=1 REPORT=1 STDOUT=1 \
   IMAGEDIR=\"/workspace/out\" \
   BUILDLOG=\"/workspace/out/build.log\" \
-  regular-gnome-atomic.iso"
+  regular-rescue.iso"
 
 echo "::endgroup::"
